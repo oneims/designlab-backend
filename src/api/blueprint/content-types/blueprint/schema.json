@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blueprints",
+  "info": {
+    "singularName": "blueprint",
+    "pluralName": "blueprints",
+    "displayName": "Blueprint",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "blueprints"
+    },
+    "description": {
+      "type": "text"
+    },
+    "pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page",
+      "mappedBy": "blueprint"
+    },
+    "blueprint_pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blueprint-page.blueprint-page",
+      "mappedBy": "blueprint"
+    }
+  }
+}
