@@ -29,12 +29,6 @@
       "relation": "oneToMany",
       "target": "api::page.page",
       "mappedBy": "blueprint"
-    },
-    "blueprint_pages": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::blueprint-page.blueprint-page",
-      "mappedBy": "blueprint"
     }
   }
 }
